@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shokem Marine Ventures – Building Roads, Delivering Reliability</title>
+  <meta name="description" content="Shokem Marine Ventures supplies road construction materials, offers equipment rentals, and executes road works in Abuja, Nigeria." />
+  <link rel="icon" type="image/png" href="/images/Group 90.png">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --brand-yellow: #f5c518; /* warm construction yellow */
+      --brand-dark: #111111;
+      --brand-gray: #f7f7f7;
+    }
+
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+
+    /* Navbar */
+    .navbar { box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+    .navbar .nav-link { font-weight: 600; }
+    .navbar-brand span { font-weight: 800; letter-spacing: .3px; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: url(/images/pail\ loader.jpg) center/cover no-repeat;
+      min-height: 70vh;
+      display: grid;
+      place-items: center;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,.35);
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
+    }
+    .hero > .container { position: relative; z-index: 1; }
+    .btn-brand { background: var(--brand-yellow); border-color: var(--brand-yellow); color: #111; font-weight: 700; }
+    .btn-brand:hover { filter: brightness(.95); color: #111; }
+
+    /* Section helpers */
+    section { padding: 64px 0; }
+    .section-heading { font-weight: 800; letter-spacing: .2px; }
+    .lead-compact { max-width: 820px; }
+
+    /* Cards */
+    .feature-card { border: 0; border-radius: 16px; box-shadow: 0 12px 30px rgba(0,0,0,.06); }
+    .feature-icon { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 14px; background: var(--brand-yellow); color: #000; font-size: 28px; }
+
+    /* Why choose us */
+    .check-item i { color: var(--brand-yellow); }
+
+    /* Gallery */
+    .gallery img { border-radius: 14px; object-fit: cover; height: 100%; width: 100%; }
+
+    /* Footer */
+    footer { background: #0f0f0f; color: #ddd; }
+    footer a { color: #ddd; }
+
+    /* Floating quick actions */
+    .floating-cta {
+      position: fixed; right: 16px; bottom: 16px; z-index: 1080; display: flex; flex-direction: column; gap: 10px;
+    }
+    .floating-cta .btn { border-radius: 999px; box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+
+    /* Small polish */
+    .bg-soft { background: var(--brand-gray); }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <img src="/images/Group 90.png" alt="Logo" class="icon-img" width="40px" height="auto">
+        <span>Shokem Marine Ventures</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain" aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#materials">Materials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rentals">Equipment Rentals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-none d-lg-flex ms-3 gap-2">
+          <a class="btn btn-sm btn-brand" href="https://wa.me/2348056009397" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn-sm btn-outline-dark" href="tel:+2348056009397">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container text-center">
+      <span class="badge text-dark bg-warning fw-bold px-3 py-2 mb-3">Abuja • Mon–Sat (Closed Sunday)</span>
+      <h1 class="display-4 fw-bold">Building Roads, Delivering Reliability</h1>
+      <p class="lead lead-compact mx-auto mt-3">We supply road construction materials, provide equipment rentals, and execute asphalt paving and road works across Abuja for contractors, developers, and individual builders.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <a href="#contact" class="btn btn-brand btn-lg"><i class="bi bi-clipboard-check me-2"></i>Request a Quote</a>
+        <a href="https://wa.me/2348056009397" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>WhatsApp Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card feature-card p-4 h-100">
+            <div class="feature-icon mb-3"><i class="bi bi-layers"></i></div>
+            <h5 class="fw-bold mb-2">Materials Supply</h5>
+            <p class="mb-0">Sand, granite/stone (chippings & gravel), asphalt, laterite, and aggregates delivered to your site.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card p-4 h-100">
+            <div class="feature-icon mb-3"><i class="bi bi-truck"></i></div>
+            <h5 class="fw-bold mb-2">Equipment Rentals</h5>
+            <p class="mb-0">Tippers, trucks, pay loaders, excavators, and bulldozers—available daily or weekly, with/without operator.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card p-4 h-100">
+            <div class="feature-icon mb-3"><img src="/images/road icon.png" width="40px"></div>
+            <h5 class="fw-bold mb-2">Road Construction</h5>
+            <p class="mb-0">Asphalt paving, grading, stone filling, and estate site road preparation by an experienced team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="bg-soft">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="section-heading mb-3">Why Choose Us</h2>
+          <p class="text-muted">We’re a one‑stop solution trusted in Abuja for materials, equipment, and road works.</p>
+          <div class="vstack gap-2 mt-3">
+            <div class="check-item"><i class="bi bi-check2-circle me-2"></i><strong>Reliable & Timely Delivery</strong></div>
+            <div class="check-item"><i class="bi bi-check2-circle me-2"></i><strong>Affordable Pricing</strong></div>
+            <div class="check-item"><i class="bi bi-check2-circle me-2"></i><strong>One‑Stop Solution</strong> (Supply • Rentals • Road Works)</div>
+            <div class="check-item"><i class="bi bi-check2-circle me-2"></i><strong>Experienced Team</strong> for Abuja projects</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid" alt="Tipper truck delivering aggregates" src="/images/truck.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section id="materials">
+    <div class="container">
+      <h2 class="section-heading mb-1">Materials</h2>
+      <p class="text-muted mb-4">High‑quality materials for every stage of road construction. <span class="fw-semibold">Request a quote and we’ll deliver to your site.</span></p>
+      <div class="row g-4">
+        <!-- Sand -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 feature-card">
+            <img src="/images/sharp sand.jpg" class="card-img-top" alt="Sharp sand" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Sand</h5>
+              <p class="card-text">Sharp sand for construction and road base works.</p>
+              <a href="#contact" class="btn btn-sm btn-brand">Request Quote</a>
+            </div>
+          </div>
+        </div>
+        <!-- Stone -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 feature-card">
+            <img src="/images/stone.jpg" class="card-img-top" alt="Granite stone chippings" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Granite & Stone</h5>
+              <p class="card-text">Chippings, gravel, and aggregates for foundations and surfacing.</p>
+              <a href="#contact" class="btn btn-sm btn-brand">Request Quote</a>
+            </div>
+          </div>
+        </div>
+        <!-- Asphalt -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 feature-card">
+            <img src="/images/Asphalt.jpg" class="card-img-top" alt="Asphalt for paving" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Asphalt</h5>
+              <p class="card-text">Durable asphalt for long‑lasting, smooth road surfaces.</p>
+              <a href="#contact" class="btn btn-sm btn-brand">Request Quote</a>
+            </div>
+          </div>
+        </div>
+        <!-- Laterite -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 feature-card">
+            <img src="/images/laterite.jpg" class="card-img-top" alt="Laterite" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Laterite</h5>
+              <p class="card-text">Ideal for filling, embankments, and sub‑base layers.</p>
+              <a href="#contact" class="btn btn-sm btn-brand">Request Quote</a>
+            </div>
+          </div>
+        </div>
+        <!-- Aggregates -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 feature-card">
+            <img src="/images/aggregate.jpg" class="card-img-top" alt="Aggregates" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Aggregates</h5>
+              <p class="card-text">Quality blends for road sub‑base and concrete works.</p>
+              <a href="#contact" class="btn btn-sm btn-brand">Request Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT RENTALS -->
+  <section id="rentals" class="bg-soft">
+    <div class="container">
+      <h2 class="section-heading mb-1">Equipment Rentals</h2>
+      <p class="text-muted mb-4">Available daily or weekly • With or without operator • Transport services available</p>
+      <div class="row g-4">
+        <!-- Tippers/Trucks -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 feature-card">
+            <img src="/images/white truck.png" class="card-img-top" alt="Tippers and trucks" />
+            <div class="card-body">
+              <h6 class="fw-bold">Tippers / Trucks</h6>
+              <p class="small">Transport sand, stone, and asphalt efficiently.</p>
+              <a href="tel:+2348056009397" class="btn btn-sm btn-outline-dark">Call to Rent</a>
+            </div>
+          </div>
+        </div>
+        <!-- Pay Loaders -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 feature-card">
+            <img src="/images/pay loader.png" class="card-img-top" alt="Pay loader" />
+            <div class="card-body">
+              <h6 class="fw-bold">Pay Loaders</h6>
+              <p class="small">Loading operations and site preparation.</p>
+              <a href="tel:+2348056009397" class="btn btn-sm btn-outline-dark">Call to Rent</a>
+            </div>
+          </div>
+        </div>
+        <!-- Excavators -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 feature-card">
+            <img src="/images/Excavator.png" class="card-img-top" alt="Excavator" />
+            <div class="card-body">
+              <h6 class="fw-bold">Excavators</h6>
+              <p class="small">Digging and trenching for roadworks.</p>
+              <a href="tel:+2348056009397" class="btn btn-sm btn-outline-dark">Call to Rent</a>
+            </div>
+          </div>
+        </div>
+        <!-- Bulldozers -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 feature-card">
+            <img src="/images/Bulldozer.png" class="card-img-top" alt="Bulldozer" />
+            <div class="card-body">
+              <h6 class="fw-bold">Bulldozers</h6>
+              <p class="small">Grading, leveling, and site clearing.</p>
+              <a href="tel:+2348056009397" class="btn btn-sm btn-outline-dark">Call to Rent</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROAD WORKS / SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 order-lg-2">
+          <img class="img-fluid rounded-4 shadow" alt="Asphalt paving crew" src="/images/Crew.jpg" />
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <h2 class="section-heading mb-3">Road Construction Services</h2>
+          <ul class="list-unstyled vstack gap-2">
+            <li><i class="bi bi-check2-square text-warning me-2"></i> Asphalt road paving</li>
+            <li><i class="bi bi-check2-square text-warning me-2"></i> Grading and stone filling</li>
+            <li><i class="bi bi-check2-square text-warning me-2"></i> Estate site road preparation</li>
+          </ul>
+          <p class="text-muted">End‑to‑end solutions from materials to machinery to workmanship—delivered with efficiency and quality.</p>
+          <a href="#contact" class="btn btn-brand">Discuss Your Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="bg-soft">
+    <div class="container">
+      <h2 class="section-heading mb-4">Gallery & Projects</h2>
+      <div class="row g-3 gallery">
+        <div class="col-6 col-md-4"><img src="/images/working truck.jpg" alt="Truck in action" /></div>
+        <div class="col-6 col-md-4"><img src="/images/working loader.jpg" alt="Stone delivery" /></div>
+        <div class="col-6 col-md-4"><img src="/images/stone&sand.jpg" alt="Loader on site" /></div>
+        <div class="col-6 col-md-4"><img src="/images/paving.jpg" alt="Asphalt paving" /></div>
+        <div class="col-6 col-md-4"><img src="/images/men.jpg" alt="Road base preparation" /></div>
+        <div class="col-6 col-md-4"><img src="/images/Roller.jpg" alt="Compaction" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-heading mb-3">About Shokem Marine Ventures</h2>
+          <p>We are an Abuja‑based company providing a complete solution for road construction: <strong>materials supply</strong>, <strong>equipment rentals</strong>, and <strong>road works services</strong>. We serve construction companies, estate developers, and individual builders with the same focus on quality and efficiency.</p>
+          <div class="row mt-3 g-3">
+            <div class="col-md-6">
+              <div class="p-3 bg-soft rounded-4 h-100">
+                <div class="fw-bold mb-1"><i class="bi bi-geo-alt-fill text-warning me-2"></i>Location</div>
+                <div>Abuja, Nigeria</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-soft rounded-4 h-100">
+                <div class="fw-bold mb-1"><i class="bi bi-clock-fill text-warning me-2"></i>Operating Hours</div>
+                <div>Monday – Saturday<br/>Closed on Sundays</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid rounded-4 shadow" alt="Materials yard" src="/images/material yard.jpg" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-soft">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="section-heading mb-3">Contact Us</h2>
+          <p class="text-muted">All inquiries, rentals, and orders are handled directly by WhatsApp and phone.</p>
+
+          <div class="d-flex gap-2 mb-3">
+            <a class="btn btn-brand" href="https://wa.me/2348056009397" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
+            <a class="btn btn-outline-dark" href="tel:+2348056009397"><i class="bi bi-telephone me-2"></i>Call Now</a>
+            <a class="btn btn-outline-dark" href="mailto:abegundejoshua@gmail.com"><i class="bi bi-envelope me-2"></i>Email</a>
+          </div>
+
+          <form id="quoteForm" class="mt-3">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your name" required/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Your phone number" required/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">What do you need?</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="E.g., 20 tons of granite to Gwarinpa, or tipper rental for 2 days" required></textarea>
+              </div>
+              <div class="col-12 d-flex gap-2">
+                <button type="submit" class="btn btn-brand"><i class="bi bi-send me-2"></i>Request via WhatsApp</button>
+                <button type="button" id="emailBtn" class="btn btn-outline-dark"><i class="bi bi-envelope-paper me-2"></i>Send by Email</button>
+              </div>
+              <div class="form-text">Submitting will open WhatsApp (or your email client) with your details pre‑filled. No data is stored on this site.</div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow">
+            <iframe title="Map to Abuja" src="https://www.google.com/maps?q=Abuja%2C%20Nigeria&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="mt-3 small text-muted">Office/Yard: Abuja, Nigeria • Mon–Sat • Closed Sunday</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <img src="/images/Group 90.png" alt="" srcset="" width="40px" height="auto">
+            <span class="fw-bold">Shokem Marine Ventures</span>
+          </div>
+          <p class="mb-2">Shokem Marine Ventures Nigeria Limited is a registered company based in Abuja, Nigeria.</p>
+          <div class="small">© <span id="year"></span> Shokem Marine Ventures. All Rights Reserved.</div>
+        </div>
+        <div class="col-md-3">
+          <div class="fw-bold mb-2">Quick Links</div>
+          <ul class="list-unstyled vstack gap-1">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#materials">Materials</a></li>
+            <li><a href="#rentals">Equipment Rentals</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="fw-bold mb-2">Contact</div>
+          <ul class="list-unstyled vstack gap-1">
+            <li><i class="bi bi-telephone me-2"></i><a href="tel:+2348056009397">+234 805 600 9397</a></li>
+            <li><i class="bi bi-whatsapp me-2"></i><a href="https://wa.me/2348056009397" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><i class="bi bi-envelope me-2"></i><a href="mailto:abegundejoshua@gmail.com">abegundejoshua@gmail.com</a></li>
+            <li class="mt-2">
+              <a class="me-2" href="#"><i class="bi bi-facebook"></i></a>
+              <a class="me-2" href="#"><i class="bi bi-instagram"></i></a>
+              <a class="me-2" href="#"><i class="bi bi-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTAs -->
+  <div class="floating-cta">
+    <a class="btn btn-brand" href="https://wa.me/2348056009397" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>Chat</a>
+    <a class="btn btn-dark" href="tel:+2348056009397"><i class="bi bi-telephone me-2"></i>Call</a>
+  </div>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form -> WhatsApp prefill
+    const form = document.getElementById('quoteForm');
+    const phoneNumber = '2348056009397'; // TODO: Replace with your WhatsApp business number (no +)
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const msg = document.getElementById('message').value.trim();
+
+      const text = `Hello Shokem Marine Ventures,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ARequest: ${encodeURIComponent(msg)}%0A%0ASent from your website.`;
+      const waUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+      window.open(waUrl, '_blank');
+    });
+
+    // Email button
+    document.getElementById('emailBtn').addEventListener('click', function(){
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Quote / Inquiry – Shokem Marine Ventures');
+      const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nRequest: ${msg}\n\nSent from your website.`);
+      window.location.href = `mailto:abegundejoshua@gmail.com?subject=${subject}&body=${body}`; // TODO: Replace email
+    });
+  </script>
+</body>
+</html>
