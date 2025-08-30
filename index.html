@@ -118,6 +118,38 @@
 
     /* Small polish */
     .bg-soft { background: var(--brand-gray); }
+
+
+
+    .mySwiper {
+  max-width: 500px;   /* control how wide the slider is */
+  margin: 0 auto;     /* center it */
+}
+
+.mySwiper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;        /* arrow color */
+  top: 50%;           /* center vertically */
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+  left: -40px;        /* move closer to image */
+}
+
+.swiper-button-next {
+  right: -40px;       /* move closer to image */
+}
+
+
+
+
   </style>
 </head>
 <body>
@@ -431,6 +463,37 @@
 </section>
 
 
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Projects</h2>
+    <!-- Slider main container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="images/aggregate.jpg" class="img-fluid rounded-4 shadow" alt="Project 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/Bulldozerr.png" class="img-fluid rounded-4 shadow" alt="Project 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/Excavator.png" class="img-fluid rounded-4 shadow" alt="Project 3">
+        </div>
+        <!-- keep adding up to 13 -->
+      </div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- CONTACT -->
   <section id="contact" class="bg-soft">
@@ -556,6 +619,28 @@
       window.location.href = `mailto:abegundejoshua@gmail.com?subject=${subject}&body=${body}`; // TODO: Replace email
     });
   </script>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+
 
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
